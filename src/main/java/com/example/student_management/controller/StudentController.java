@@ -62,7 +62,7 @@ public class StudentController {
             @ApiResponse(responseCode = "200", description = "Student found"),
             @ApiResponse(responseCode = "404", description = "Student not found")
     })
-    @GetMapping("/student/{id}")
+    @GetMapping("/students/{id}")
     public ResponseEntity<Student> getStudent(
             @PathVariable Long id) {
 
@@ -78,7 +78,7 @@ public class StudentController {
             @ApiResponse(responseCode = "400", description = "Invalid request data"),
             @ApiResponse(responseCode = "404", description = "Student not found")
     })
-    @PutMapping("/student/{id}")
+    @PutMapping("/students/{id}")
     public ResponseEntity<Student> updateStudent(
             @PathVariable Long id,
             @RequestBody StudentUpdateRequest request) {
@@ -96,7 +96,7 @@ public class StudentController {
             @ApiResponse(responseCode = "200", description = "Student deleted successfully"),
             @ApiResponse(responseCode = "404", description = "Student not found")
     })
-    @DeleteMapping("/student/{id}")
+    @DeleteMapping("/students/{id}")
     public ResponseEntity<String> deleteStudent(
             @PathVariable Long id) {
 
